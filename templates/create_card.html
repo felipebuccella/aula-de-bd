@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Criar Novo Card</h2>
+    <form method="POST" action="/form_create">
+        <label for="title">Título:</label>
+        <input type="text" id="title" name="title" placeholder="Título" required>
+        <br><br>
+        <label for="subtitle">Subtítulo:</label>
+        <input type="text" id="subtitle" name="subtitle" placeholder="Subtítulo" required>
+        <br><br>
+        <label for="text">Texto:</label>
+        <textarea id="text" name="text" placeholder="Texto" required></textarea>
+        <br><br>
+        <button type="submit">Criar Card</button>
+    </form>
+{% endblock %}
