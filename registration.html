@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Seus Cards</h1>
+    
+    <a href="/create">Novo Card</a>
+    <br><br>
+
+    {% for card in cards %}
+        <div class="card">
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.subtittle }}</p>
+            <a href="/card/{{ card.id }}">Ver mais</a>
+        </div>
+    {% endfor %}
+
+{% endblock %}
